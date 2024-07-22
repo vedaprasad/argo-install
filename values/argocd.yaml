@@ -1,0 +1,21 @@
+---
+configs:
+  secret:
+    argocdServerAdminPassword: $2a$10$bApGOQ7agYl75nCbYZqGdOg8RxCK7L8MzXg1zbCrPz8P6CeCAMBAW
+server:
+  ingress:
+    enabled: false
+  extraArgs:
+    - --insecure
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+redis-ha:
+  enabled: false
+controller:
+  enableStatefulSet: true
+repoServer:
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+
